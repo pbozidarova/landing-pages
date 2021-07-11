@@ -1,23 +1,26 @@
 .team {
 
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 1em;
+    row-gap: 1em;
     text-align: center;
 
     &-member{
         display: grid;
         align-items: center;
+        
     }
-
+    
     &-member__img{
+        margin: 0 auto;
         height: 13em;
         width: 13em;
         border: 0.1em solid $primary-color;
         border-radius: 50%;
         @include BoxShadow(3);
         overflow: hidden;
-
+        
     }
 
     &-member__name{

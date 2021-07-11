@@ -73,41 +73,57 @@ article:first-child {
   margin-top: 35em;
 }
 
-.article {
-  display: -ms-grid;
-  display: grid;
-}
-
-.article__content {
-  grid-area: description;
-  margin: 2em;
-  padding: 2em;
-}
-
-.article__media {
-  grid-area: media;
-}
-
 .article--odd {
   background-color: white;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-areas: media description;
 }
 
 .article--odd .article__content {
+  grid-area: description;
   background-color: #f8f8f8;
+  padding: 2em;
+  margin: 3em 0 3em 20em;
+  border: 1px solid #f8f8f8;
+  border-radius: 0.5em;
+  position: relative;
+  z-index: 1;
+}
+
+.article--odd .article__media {
+  z-index: 0;
+  grid-area: media;
 }
 
 .article--even {
   background-color: #f8f8f8;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-areas: description media;
 }
 
 .article--even .article__content {
+  grid-area: description;
   background-color: white;
+  padding: 2em;
+  margin: 3em 20em 3em 0;
+  border: 1px solid #f8f8f8;
+  border-radius: 0.5em;
+  position: relative;
+  z-index: 1;
+}
+
+.article--even .article__media {
+  position: relative;
+  z-index: 0;
+  grid-area: media;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 .c-btn {
@@ -260,10 +276,11 @@ header section h2 {
 .team {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   -webkit-column-gap: 1em;
           column-gap: 1em;
+  row-gap: 1em;
   text-align: center;
 }
 
@@ -276,6 +293,7 @@ header section h2 {
 }
 
 .team-member__img {
+  margin: 0 auto;
   height: 13em;
   width: 13em;
   border: 0.1em solid #333;
