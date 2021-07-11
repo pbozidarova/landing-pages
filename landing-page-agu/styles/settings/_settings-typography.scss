@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&display=swap');
 
 html, * {
     font-family: 'Mukta', sans-serif;
@@ -8,7 +9,8 @@ html, * {
 }
 
 h1, .h1-like{
-    font-family: 'Mukta', sans-serif;
+    // font-family: 'Mukta', sans-serif;
+    font-family: 'Zen Loop', cursive;
     font-size: 6em;
     color: white;
 }
@@ -16,9 +18,19 @@ h1, .h1-like{
 h2, .h2-like{
     font-size: 3em;
     color: white;
+    font-family: 'Zen Loop', cursive;
+
+}
+
+h3, .h3-like{
+    font-size: 2em;
+    // color: white;
+    font-family: 'Zen Loop', cursive;
+
 }
 
 h4 {
+    font-family: 'Zen Loop', cursive;
     font-size: 1.4em;
     // color: white;
 }

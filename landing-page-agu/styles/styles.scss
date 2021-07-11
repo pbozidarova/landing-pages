@@ -5,12 +5,15 @@
 
 @import "./generic/normalize";
 
-@import "./elements/elements-header";
+@import "./elements/e-header";
+@import "./elements/e-article";
 
 @import "./components/c-article";
 @import "./components/c-button";
 @import "./components/c-main";
 @import "./components/c-navigation";
 @import "./components/c-site-title";
+@import "./components/c-team";
+@import "./components/c-banner";
 
 @import "./utilities/u-visibility";

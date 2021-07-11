@@ -1,0 +1,53 @@
+.article{
+    display: grid;
+    // grid-template-columns: 1fr 70%;
+
+
+
+    &__content{
+        grid-area: description;  
+        margin: 2em;
+        padding: 2em;      
+    }
+
+    &__media{
+        grid-area: media;        
+    }
+
+    &--odd{
+        background-color: white;
+        display: grid;
+        grid-template-areas:  media description;
+        .article__content{
+            background-color: $background-light;
+        }
+    }
+
+    &--even{
+        background-color: $background-light;
+        display: grid;
+
+        grid-template-areas: description media;
+        
+        .article__content{
+            background-color: white;
+        }
+    }
+
+    &__title{        
+        &-subline{
+
+        }
+    }
+
+    &__initial-content{
+
+    }
+
+    &__read-more-content{
+        
+    }
+    
+
+}
+
