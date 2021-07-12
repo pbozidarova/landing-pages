@@ -1,0 +1,46 @@
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr max-content;
+    column-gap: 2em;
+    // align-items: center;
+    justify-content: center;
+    padding: 2em;
+    color: white;
+
+    &__map{
+        position: relative;
+        z-index: 1;
+        display: flex;
+        max-width: 30em;
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__address{
+        position: relative;
+        z-index: 1;
+
+        & p, h3 {
+            color: $background-light;
+        }
+
+        & h3{
+            padding: 1.5em;
+        }
+
+
+    }
+
+    &__direct-contact{
+        position: relative;
+        z-index: 1;
+        
+        & h4, p, a, i {
+            color: $background-light;
+        }
+
+    }
+}
