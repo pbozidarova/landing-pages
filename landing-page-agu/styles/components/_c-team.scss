@@ -1,10 +1,13 @@
 .team {
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1em;
-    row-gap: 1em;
-    text-align: center;
+    .o-wrapper{
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 3em;
+        row-gap: 2em;
+        text-align: center;
+    }
 
     &-member{
         display: grid;

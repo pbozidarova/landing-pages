@@ -1,14 +1,14 @@
 .banner{
-    position: absolute;
-    bottom: -35em;
-    left: 10%;
+    // position: absolute;
+    // bottom: -35em;
+    // left: 20%;
     background: $background-light;
-    max-width: 80%;
+    // max-width: 60%;
     z-index: 6;
-    padding: 2em 4em;
+    padding: 3em 4em;
     @include BoxShadow(2);
-    border: 0.2em solid $background-light;
-    border-radius: 0.5em;
+    // border: 0.2em solid $background-light;
+    // border-radius: 0.5em;
     text-align: center;
 
     &__title{

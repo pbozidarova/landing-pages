@@ -40,6 +40,11 @@ h4 {
           box-sizing: border-box;
 }
 
+.o-wrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,7 +59,7 @@ header {
   background-position: center;
   color: #fff;
   /* box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.5); */
-  min-height: 90vh;
+  min-height: 60vh;
 }
 
 header::after {
@@ -70,11 +75,7 @@ header::after {
 
 article {
   border-bottom: 0.1em solid #d3d3d3;
-  padding: 2em;
-}
-
-article:first-child {
-  margin-top: 35em;
+  padding: 3em 0;
 }
 
 footer {
@@ -93,8 +94,20 @@ footer::after {
   background: rgba(0, 0, 0, 0.6);
 }
 
+ul {
+  padding-bottom: 1em;
+}
+
+li {
+  list-style: inside;
+  list-style-type: circle;
+}
+
 .article--odd {
   background-color: white;
+}
+
+.article--odd .o-wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -105,12 +118,18 @@ footer::after {
 .article--odd .article__content {
   grid-area: description;
   background-color: #f8f8f8;
-  padding: 2em;
-  margin: 3em 0 3em 20em;
+  padding: 2em 3em;
+  margin: 2em 0 2em 20em;
   border: 1px solid #f8f8f8;
   border-radius: 0.5em;
   position: relative;
   z-index: 1;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.article--odd .article__content p, .article--odd .article__content h4 {
+  padding-bottom: 1em;
 }
 
 .article--odd .article__media {
@@ -120,6 +139,9 @@ footer::after {
 
 .article--even {
   background-color: #f8f8f8;
+}
+
+.article--even .o-wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -130,12 +152,18 @@ footer::after {
 .article--even .article__content {
   grid-area: description;
   background-color: white;
-  padding: 2em;
-  margin: 3em 20em 3em 0;
+  padding: 2em 3em;
+  margin: 2em 20em 2em 0;
   border: 1px solid #f8f8f8;
   border-radius: 0.5em;
   position: relative;
   z-index: 1;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.article--even .article__content p, .article--even .article__content h4 {
+  padding-bottom: 1em;
 }
 
 .article--even .article__media {
@@ -307,14 +335,14 @@ header section h2 {
   opacity: 1;
 }
 
-.team {
+.team .o-wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -webkit-column-gap: 1em;
-          column-gap: 1em;
-  row-gap: 1em;
+  -webkit-column-gap: 3em;
+          column-gap: 3em;
+  row-gap: 2em;
   text-align: center;
 }
 
@@ -342,17 +370,11 @@ header section h2 {
 }
 
 .banner {
-  position: absolute;
-  bottom: -35em;
-  left: 10%;
   background: #f8f8f8;
-  max-width: 80%;
   z-index: 6;
-  padding: 2em 4em;
+  padding: 3em 4em;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  border: 0.2em solid #f8f8f8;
-  border-radius: 0.5em;
   text-align: center;
 }
 
@@ -364,7 +386,7 @@ header section h2 {
   padding-bottom: 1em;
 }
 
-.footer {
+.footer .o-wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr max-content;
@@ -372,10 +394,10 @@ header section h2 {
       grid-template-columns: 1fr 1fr max-content;
   -webkit-column-gap: 2em;
           column-gap: 2em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 2em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3em 0;
   color: white;
 }
 
@@ -387,6 +409,8 @@ header section h2 {
   display: flex;
   max-width: 30em;
   overflow: hidden;
+  border: 1px trasparent white;
+  border-radius: 0.5em;
 }
 
 .footer__map img {
@@ -403,7 +427,7 @@ header section h2 {
 }
 
 .footer__address h3 {
-  padding: 1.5em;
+  padding: 1.5em 0;
 }
 
 .footer__direct-contact {
@@ -413,6 +437,10 @@ header section h2 {
 
 .footer__direct-contact h4, .footer__direct-contact p, .footer__direct-contact a, .footer__direct-contact i {
   color: #f8f8f8;
+}
+
+.footer__direct-contact h4 {
+  padding: 1em 0 0.5em 0;
 }
 
 .u-hidden {
