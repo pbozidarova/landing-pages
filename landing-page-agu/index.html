@@ -104,7 +104,9 @@
                          
                          <p>Казваме: "Довиждане и до утре!"</p>
                     </div>
-                    <button class="c-btn">още</button>
+                    <div class="article__read-more-button">
+                        <button class="c-btn">прочети повече</button>
+                    </div>
                 </div>
             </div>
            
@@ -142,7 +144,9 @@
                             
                         <p>За всяка друга подробност или възможност на посещение, която ви интересува, просто ни се обадете, винаги сме на линия, но предпочитаме да е в работно време </p>
                     </div>
-                    <button class="c-btn">още</button>
+                    <div class="article__read-more-button">
+                        <button class="c-btn">прочети повече</button>
+                    </div>
                 </div>
             
             </div>
@@ -211,7 +215,7 @@
 
         <section class="footer__address">
             <p>Можете да ни откриете на адрес:</p> 
-            <p>София ул. „Живко Николов“ 35, кв. „Редута”</p>
+            
 
             <h3>Заповядайте!</h3>
             <p>Молим само, всяко посещение да е след предварителна уговорка, за да не объркваме дневния ритъм на децата.</p>
@@ -226,7 +230,11 @@
             <a href="http://www.facebook.com" target="__blank"> <i class="fab fa-facebook"></i></a>
             
         </section>
-
+        
+        <section class="footer__copyright"> 
+            <p>Copyright Agu &copy;2021</p>
+        </section>
+        
        </div>
         
    </footer>
@@ -241,11 +249,12 @@
     const btns = document.querySelectorAll('button')
 
     btns.forEach(btn => btn.addEventListener('click', e => {
-       const article = btn.parentElement.querySelector(".article__read-more-content")
+       const article = btn.parentElement.parentElement.querySelector(".article__read-more-content")
 
        if(article.classList.contains("u-hidden")){
             article.classList.remove("u-hidden");
             article.classList.add("u-visible");
+            btn.innerText = "прочети по-малко"
        }else{
         article.classList.remove("u-visible");
             article.classList.add("u-hidden");

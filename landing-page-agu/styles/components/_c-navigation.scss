@@ -1,9 +1,6 @@
 // header h1,
 nav{
-    // padding: 1rem 1.4rem;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: flex-end;
+    display: none;
     position: relative;
     background: rgba(0, 0, 0, 0.3);
 
@@ -11,6 +8,10 @@ nav{
     z-index: 55;
     width: 100%;
     border-bottom: 0.2em solid $border-color;
+
+    @include for-tablet-landscape-up{
+        display: block;
+    }
 }
 
 header a{
