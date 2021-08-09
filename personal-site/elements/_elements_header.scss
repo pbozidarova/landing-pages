@@ -1,0 +1,21 @@
+header{
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: $pastelForth;
+}
+
+header ::after{
+    content: "";
+    rotate: -7deg;
+    // display: block;
+    height: 70%;
+    width: 160%;
+    position: absolute;
+    left: -10%;
+    bottom: -30%;
+    z-index: 1;
+    background-color: $pastelForth;
+}

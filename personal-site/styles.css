@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+header {
+  background-color: #026670;
+  color: #EDEAE5;
+}
+
+main {
+  background-color: #FCE181;
+}
+
+footer {
+  background-color: #026670;
+  color: #EDEAE5;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  font-family: 'Courgette', cursive;
+  height: 50vh;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Courgette', cursive;
+  z-index: 2;
+}
+
+h1 {
+  line-height: 2em;
+}
+
+h2 {
+  line-height: 2rem;
+}
+
+p, li {
+  font-family: 'Roboto Slab', serif;
+  line-height: 1.5em;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  color: #026670;
+}
+
+main ::after {
+  content: "";
+  rotate: -7deg;
+  height: 70%;
+  width: 160%;
+  position: absolute;
+  left: -10%;
+  bottom: -30%;
+  z-index: 1;
+  background-color: #026670;
+}
+
+header {
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FCE181;
+}
+
+header ::after {
+  content: "";
+  rotate: -7deg;
+  height: 70%;
+  width: 160%;
+  position: absolute;
+  left: -10%;
+  bottom: -30%;
+  z-index: 1;
+  background-color: #FCE181;
+}
+
+footer {
+  color: #FCE181;
+}
+
+.o-wrapper {
+  width: 85%;
+  margin: 0 auto;
+  padding: 2em;
+}
