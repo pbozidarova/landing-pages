@@ -4,12 +4,12 @@ header{
     position: relative;
     display: flex;
     align-items: center;
-    color: $pastelForth;
+    // color: $pastelForth;
 }
 
 header ::after{
     content: "";
-    rotate: -7deg;
+    rotate: -5deg;
     // display: block;
     height: 70%;
     width: 160%;
@@ -17,5 +17,6 @@ header ::after{
     left: -10%;
     bottom: -30%;
     z-index: 1;
-    background-color: $pastelForth;
+    background-color: $paleYellow;
+    // @include BoxShadow(4);
 }

@@ -1,0 +1,21 @@
+.projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5em;
+    row-gap: 1.5em;
+
+}
+
+.project{
+    padding: 1.5em;
+
+    background-color: $paleGrey;
+    border-radius: 0.5em;
+    // border: 2px solid $pastelSecond;
+
+    @include BoxShadow(2);
+
+    & h3{
+
+    }
+}

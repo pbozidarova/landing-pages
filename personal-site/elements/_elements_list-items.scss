@@ -1,0 +1,9 @@
+li {
+    list-style: none;
+    padding: 1em;
+    background-color: $paleGrey;
+    display: inline-block;
+    border-radius: 1em;
+    @include BoxShadow(2);
+    
+}
