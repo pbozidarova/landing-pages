@@ -5,5 +5,5 @@ li {
     display: inline-block;
     border-radius: 1em;
     @include BoxShadow(2);
-    
+    min-width: 6em;
 }

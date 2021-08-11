@@ -1,21 +1,43 @@
 .projects{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5em;
-    row-gap: 1.5em;
+    column-gap: 2em;
+    row-gap: 2em;
 
 }
 
 .project{
-    padding: 1.5em;
+    padding: 3em;
 
     background-color: $paleGrey;
     border-radius: 0.5em;
-    // border: 2px solid $pastelSecond;
+    border-bottom: 10px solid $paleGrey;
+
 
     @include BoxShadow(2);
 
-    & h3{
+    transition: all 0.5s ease-in;
+    transition-property: background-color, border, box-shadow;
+    // transition: border 1s ease;
+    
+
+    &:hover{
+        background-color: $darkYellow;
+        border-bottom: 10px solid $paleGreen;
+        @include BoxShadow(4);
 
     }
+
+    & h3{
+        padding-bottom: 1em;
+    }
+
+    & a {
+
+    }
+
+    & p{
+        padding: 1em 0;
+    }
+    
 }
