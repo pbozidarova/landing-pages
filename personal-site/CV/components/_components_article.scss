@@ -1,0 +1,12 @@
+.work-experience__article{
+    &-header {
+        border-top: 2px solid $darkGreen;
+        display: grid;
+        grid-template-columns: max-content max-content;
+        justify-content: space-between;
+        padding-bottom: 1em;
+    }
+    &-content {
+        padding-bottom: 1em;
+    }
+}

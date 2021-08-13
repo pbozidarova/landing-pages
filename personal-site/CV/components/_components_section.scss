@@ -1,0 +1,26 @@
+section {    
+    header{
+        display: grid;
+        grid-template-columns: 5em 1fr ;
+        align-items: center;
+        
+        background-color: $darkYellow;
+        color: $darkGreen;
+        // max-width: 40%;
+        // border-radius: 0.5em;    
+        overflow: hidden;
+
+        div {
+            display: block;
+            text-align: center;
+            align-self: center;
+            background-color: $darkGreen;
+            color: $darkYellow;
+            padding: 0.5em;
+        }
+
+        h4{
+            padding: 0.5em;
+        }
+    }
+}

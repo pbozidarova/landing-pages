@@ -1,0 +1,17 @@
+li {
+    list-style: none;
+    // padding: 0.8em;
+
+    display: grid;
+    grid-template-columns: 5em max-content;
+    align-items: center;
+    // justify-content: space-around;
+
+   div  {
+       margin: 0 auto;
+   }
+
+   div:last-child{
+        padding: 1em 0.5em;
+   }
+}

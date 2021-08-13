@@ -14,12 +14,12 @@ main ::after{
     content: "";
     rotate: -5deg;
     // display: block;
-    height: 20%;
+    height: 15%;
     width: 150%;
     position: absolute;
     left: -10%;
-    bottom: -10%;
+    bottom: -14%;
     z-index: 1;
     background-color: $paleGrey;
-    @include BoxShadow(inset2);
+    @include BoxShadow(inset);
 }
