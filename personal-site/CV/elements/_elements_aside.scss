@@ -1,3 +1,18 @@
 aside {
     color: $darkGreen;
+    display: block;
+    
+
+    @include for-tablet-landscape-up{
+        display: grid;
+
+        grid-template-columns: 10em 1fr 1fr;
+        justify-content: space-between;
+        column-gap: 1em;
+    }
+
+    @include for-desktop-up{
+        display: block;
+        // justify-content: unset;
+    }
 }

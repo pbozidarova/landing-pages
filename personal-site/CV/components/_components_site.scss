@@ -1,11 +1,25 @@
 .site-content{
-    display: grid;
-    
+    max-width: 80%;
     margin: 0 auto;
-    max-width: 70%;
-    grid-template-columns: 20em 1fr;
-    column-gap: 2em;
+
+    display: grid;
+    // grid-template-columns: 80%;
 
     border-top: 3em solid $darkGreen;
     border-bottom: 3em solid $darkGreen;
+
+
+    /* CSS Smooth Scroll */
+    // overflow-y: scroll;
+    // scroll-behavior: smooth;
+    // scroll-snap-type: y mandatory;
+
+    @include for-desktop-up {
+        display: grid;
+    
+        
+        grid-template-columns: 20em 1fr;
+        column-gap: 2em;
+    
+    }
 }

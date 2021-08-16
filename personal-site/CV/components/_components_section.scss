@@ -22,5 +22,15 @@ section {
         h4{
             padding: 0.5em;
         }
+
+    }
+}
+
+.technical-skills ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include for-desktop-up{
+        display: block;
     }
 }

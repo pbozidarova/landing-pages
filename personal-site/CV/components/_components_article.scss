@@ -2,9 +2,13 @@
     &-header {
         border-top: 2px solid $darkGreen;
         display: grid;
-        grid-template-columns: max-content max-content;
+        grid-template-columns: 1fr max-content;
         justify-content: space-between;
         padding-bottom: 1em;
+
+        &__date{
+            padding-top: 0.4em;
+        }
     }
     &-content {
         padding-bottom: 1em;
