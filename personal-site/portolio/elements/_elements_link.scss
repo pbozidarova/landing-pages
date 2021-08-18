@@ -11,7 +11,7 @@ a {
 
     &:hover{
         background-color: $paleGreen;
-        
+        // color: $paleGreen;
         @include BoxShadow(2)
     }
 }

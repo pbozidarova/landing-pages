@@ -3,5 +3,7 @@ section {
 
     border-bottom: 2px solid $darkGreen;
     
-
+    &:last-child{
+        border-bottom: none;
+    }
 }

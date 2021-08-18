@@ -1,5 +1,5 @@
 header{
-    height: 60vh;
+    height: 40vh;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -15,7 +15,7 @@ header ::after{
     width: 160%;
     position: absolute;
     left: -10%;
-    bottom: -30%;
+    bottom: -45%;
     z-index: 1;
     background-color: $paleYellow;
     @include BoxShadow(inset2);
