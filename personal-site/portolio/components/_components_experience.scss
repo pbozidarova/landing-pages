@@ -1,0 +1,49 @@
+.experince{
+    display: grid;
+    position: relative;
+
+    & > div {
+        padding: 1em;
+        width: 40%;
+        border: 1px solid $darkGreen;
+    }
+
+    &-odd {
+        
+        display: grid;
+            
+        & > div {
+        
+        }
+        
+        &::after{
+            content: "middle";
+            display: inline-block;
+            border: 1px solid $darkGreen;
+        }
+
+
+    }
+
+    &-even {
+        display: grid;
+        // align-content: flex-end;
+        // justify-content: end;     
+        margin-left: auto;
+
+        & > div {
+               
+        }
+    }
+
+    .scale {
+        margin: 0 auto;
+        position: absolute;
+        height: 100%;
+        padding: 0;
+        left: 50%;
+        width: 0.5em;
+        // border: none;
+        background-color: $darkGreen;
+    }
+}
