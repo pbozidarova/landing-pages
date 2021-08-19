@@ -1,1 +1,1 @@
-# landing-pages
+Each folder represents a different project for a landing-page.

@@ -12,7 +12,7 @@
     background-color: $paleGrey;
     border-radius: 0.5em;
     border-bottom: 10px solid $paleGrey;
-
+    display: grid;
 
     @include BoxShadow(2);
 
@@ -29,7 +29,7 @@
     }
 
     & h3{
-        padding-bottom: 1em;
+        // padding-bottom: 1em;
     }
 
     & a {
@@ -40,4 +40,15 @@
         padding: 1em 0;
     }
     
+    &-buttons{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3em;
+        align-self: flex-end;
+        & a{
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
 }

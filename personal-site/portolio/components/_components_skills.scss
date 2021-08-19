@@ -1,8 +1,23 @@
 .skills {
 
-    ul {
-        display: flex;
+    & > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        // column-gap: 2em;
+        
         justify-content: space-between;
+    }
+    ul {
+        // max-width: 90%;
+        li {
+            height: 10%;
+            margin: 0em 1em 1em 0;
+            padding: 1em 4em;
+            background-color: $darkGreen;
+            color: $paleGrey;
+        }
+        // display: flex;
+        // justify-content: space-between;
 
     }
 }

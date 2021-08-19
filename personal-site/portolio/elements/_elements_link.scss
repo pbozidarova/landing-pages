@@ -1,17 +1,23 @@
 a {    
     text-decoration: none;
     color: $darkGreen;
+    background-color: $paleGreen;
+
     display: inline-block;
-    padding: 1em;
-    
-    border: 1px solid $darkGreen;
+    padding: 0.5em;
+    margin: 0 auto;
+
+    // border: 1px solid $darkGreen;
     border-radius: 0.5em;
 
-    transition: background-color 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    transition-property: background-color, color;
+    @include BoxShadow(2)
+
 
     &:hover{
-        background-color: $paleGreen;
-        // color: $paleGreen;
+        color: $darkYellow;
+        background-color: $darkGreen;
         @include BoxShadow(2)
     }
 }

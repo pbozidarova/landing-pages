@@ -7,6 +7,7 @@
         width: 40%;
         @include BoxShadow(2);
         background-color: $darkYellow;
+        
         // border: 1px solid $darkGreen;
     }
 
@@ -15,7 +16,8 @@
         display: grid;
         position: relative;
         & > div {
-        
+            display: flex;
+            justify-content: space-between;
         }
         
         &::after{
@@ -43,7 +45,8 @@
         margin-left: auto;
         position: relative;
         & > div {
-               
+            display: flex;
+            justify-content: space-between;
         }
 
         &::after{
@@ -102,9 +105,9 @@
 }
 .cv {
     display: flex;
-    padding-top: 2em;
-    a {
-        margin: 0 auto;
-    }
+    padding-top: 2em;    
     
+    a {
+        text-transform: uppercase;
+    }
 }
