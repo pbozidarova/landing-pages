@@ -1,0 +1,32 @@
+@keyframes rotateOdd {
+    from {
+      rotate: -90deg;
+      opacity: 0;
+    }
+  
+    to {
+    //   margin-left: 0%;
+    //   width: 100%;
+    }
+  }
+
+  
+@keyframes rotateEven {
+    from {
+      rotate: 90deg;
+      opacity: 0;
+    }
+  
+    to {
+    //   margin-left: 0%;
+    //   width: 100%;
+    }
+  }
+
+  @keyframes slide-in{
+    from{
+      margin-left: 7em;
+      opacity: 0;
+    }
+
+  }

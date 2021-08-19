@@ -7,8 +7,9 @@
 }
 
 .project{
-    padding: 3em;
 
+    padding: 3em;
+    
     background-color: $paleGrey;
     border-radius: 0.5em;
     border-bottom: 10px solid $paleGrey;
@@ -51,4 +52,10 @@
             text-align: center;
         }
     }
+}
+
+.animate-project{
+    animation-duration: 2s;
+    animation-name: slide-in;
+
 }

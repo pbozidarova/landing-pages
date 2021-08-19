@@ -7,12 +7,12 @@
         width: 40%;
         @include BoxShadow(2);
         background-color: $darkYellow;
-        
+
         // border: 1px solid $darkGreen;
     }
 
     &-odd {
-        
+                
         display: grid;
         position: relative;
         & > div {
@@ -39,11 +39,14 @@
     }
 
     &-even {
+
         display: grid;
         // align-content: flex-end;
         // justify-content: end;     
         margin-left: auto;
         position: relative;
+
+        
         & > div {
             display: flex;
             justify-content: space-between;
@@ -110,4 +113,14 @@
     a {
         text-transform: uppercase;
     }
+}
+
+.animate-even{
+    animation-duration: 2s;
+    animation-name: rotateEven
+}
+
+.animate-odd{
+    animation-duration: 2s;
+    animation-name: rotateOdd;
 }
