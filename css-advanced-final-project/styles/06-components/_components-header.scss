@@ -1,0 +1,113 @@
+.c-header {
+    
+    @include BoxShadow(2);
+    
+    @extend %o_relative;
+    z-index: 1;
+    background: white;
+
+    .o-content-wrapper{
+        
+        min-height: 4.5rem;   
+
+        display: grid;
+        grid-template-areas: "logo navigation";
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    &__logo{
+        grid-area: logo;
+        
+        display: grid;
+        grid-template-columns: max-content max-content;
+        column-gap: 1em;
+        align-items: center;
+        // justify-content: space-between;
+
+        & > img:hover{
+            cursor: pointer;
+        }
+
+        & > img {
+              transition: transform 0.2s ease-out;
+        }
+
+        & > img:first-child:hover {
+            transform: rotate(90deg);
+            
+        }
+
+        @include for-tablet-portrait-up {
+            &--mobile > img {
+                display: none;
+            }
+
+            &--desktop > img {
+                display: block;
+            }
+        }
+
+        
+    }
+
+    &__navigation{
+        grid-area: navigation;
+        display: grid;
+        grid-template-columns: max-content max-content max-content;
+        column-gap: 1.5em;
+        align-items: center;
+
+        &-menu-icon:hover{
+            cursor: pointer;
+        }
+
+        @include for-tablet-portrait-up {
+            grid-template-columns:  1em max-content max-content;
+            
+            &-search-icon > img {
+                display: block;
+            }
+
+        }
+       
+        @include for-tablet-landscape-up {
+            grid-template-columns: max-content 2em max-content;
+            column-gap: 1em;
+            & > ul {
+                display: block;
+                display: grid;
+                column-gap: 1.5em;
+                align-items: center;
+                grid-template-columns: repeat(6, max-content);
+            }
+
+            &-menu-icon {
+                display: none;
+                color: $grey-500;
+            }
+
+            &-list-item {
+                text-transform: uppercase;
+                color: $grey-700;
+                transition: color 0.5s ease-in;
+
+                &:hover{
+                    cursor: pointer;
+                    color: $secondary-800;
+                }
+            }
+        }
+
+        @include for-desktop-up{
+
+            & > ul {
+                column-gap: 3em;
+            }
+        }
+
+
+    }
+
+}

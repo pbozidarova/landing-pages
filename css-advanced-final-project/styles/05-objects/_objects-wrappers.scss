@@ -1,0 +1,15 @@
+.o-content-wrapper {
+    max-width: 89.6%;
+    margin: 0 auto;
+    // padding: 0 5.2%;
+
+    @include for-tablet-portrait-up{
+
+    }
+}
+
+// .o-banner-wrapper {
+//     // width: 90%;
+//     padding: 0 10.4%;
+    
+// }

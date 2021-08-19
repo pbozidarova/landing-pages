@@ -1,0 +1,40 @@
+.c-article{
+    display: grid;
+    grid-template-areas: "icon header"
+                            "content content";
+    grid-template-columns: max-content 1fr;                        
+    column-gap: 1.25em;
+    row-gap: 1em;
+    text-align: left;
+    // padding-top: 2em;
+    // padding-bottom: 2em;
+
+    &:hover{
+        .c-article__icon img {
+            transform: rotate(360deg);
+        }
+    }
+
+    @include for-tablet-landscape-up{
+        column-gap: 2em;
+
+        grid-template-areas: "icon header"
+                            ". content";
+    }
+
+    &__header{
+        grid-area: header;
+    }
+
+    &__icon{
+        grid-area: icon;
+        img{
+            transition: transform 1s ease-in ; 
+        }
+
+    }
+
+    &__content{
+        grid-area: content;
+    }
+}

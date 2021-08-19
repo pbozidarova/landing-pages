@@ -1,0 +1,35 @@
+.o-border {
+
+    &-right{
+        &--blue{
+            @include for-tablet-landscape-up{
+                @include CircleBorder(yellow-right);
+            } 
+        }
+    }
+    
+    &__down-right {
+         &--yellow {
+            @include CircleBorder(yellow-down);
+
+            @include for-tablet-landscape-up{
+                @include CircleBorder(yellow-right);
+            } 
+        }                     
+    }
+
+    
+    &__down {
+        &--down-half-elipse-secondary-bg {
+            @include CircleBorder(down-half-elipse);
+        }        
+
+        &--upper-half-elipse-secondary-bg {
+            @include CircleBorder(upper-half-elipse);      
+        } 
+        
+        &--primary {
+            @include CircleBorder(primary-blue);      
+        }
+   }
+}

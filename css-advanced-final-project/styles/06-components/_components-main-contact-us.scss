@@ -1,0 +1,188 @@
+.c-main-contact-us{
+    color: $grey-700;
+
+    &__map{
+        position: relative;
+        min-height: 5em;
+   
+
+        @include for-tablet-portrait-up{
+            min-height: 26.625em;
+        }
+
+        & > img {
+            position: absolute;
+            width: 100%;
+            top: -4.5em;
+        }        
+    }
+
+    &__contact{
+        
+        .o-content-wrapper{
+            position: relative;
+            padding-bottom: 6rem;
+
+            @include for-tablet-portrait-up{
+                padding-top: 11.25rem;
+
+            }
+
+        }
+
+        &-info-card{
+            
+            background: white;
+            border-radius: 0.75em;
+            @include BoxShadow(1);
+            padding: 2em;                        
+            max-width: 32.43em;
+            text-align: center;
+            margin-bottom: 3em;
+
+            @include for-tablet-portrait-up{
+                margin-bottom: 0;
+                position: absolute;        
+                text-align: left;
+                top: -40%;
+                z-index: 1;
+                display: grid;
+                // grid-template-columns: 13.5em 13.5em;
+                column-gap: 2em;
+                row-gap: 0.875em;
+                grid-template-areas: "address working-time"
+                                      "contact ."
+                                      "button button";
+            }
+
+            &-box{
+                padding: 1em;
+                & > h3 {
+                    padding-bottom: 1.125em;
+                }
+                @include for-tablet-portrait-up{
+                    padding: 0em;
+                }
+
+            }
+            
+            &-box.address{
+                grid-area: address;
+            }
+            &-box.working-time{
+                grid-area: working-time;
+                display: grid;
+                justify-content: center;
+                & > p {
+                    display: grid;
+                    grid-template-areas: "time dayOfWeek"
+                                         ". dayOfWeek";
+                    grid-template-columns: max-content 1fr;
+                    column-gap: 1em;
+                }
+
+                &__time{
+                    grid-area: time;
+                    grid-row-start: span 2;
+                }
+                &__dayOfWeek{
+                    grid-area: dayOfWeek;
+                }
+            }
+            &-box.contact{
+                grid-area: contact;
+            }
+            &-box.button{
+                grid-area: button;
+                padding: 1em;
+                margin: 0 auto;
+                & > .btn {
+                    padding: 1em;  
+                } 
+
+                @include for-tablet-portrait-up{
+                    & > .btn {
+                        padding: 1em 1.85em;  
+                    } 
+                }
+            }
+        }
+
+        &-form{
+            max-width: 53.125em;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: "heading"
+                                    "title"
+                                    "email"
+                                    "message"
+                                    "button";
+
+            @include for-tablet-portrait-up{
+                grid-template-areas: "heading heading"
+                                        "title email"
+                                        "message message"
+                                        "button button";
+                column-gap: 2em;
+            }
+            row-gap: 2em;
+
+            &-heading{
+                grid-area: heading;
+                text-align: center;
+            }
+            &-title{
+                grid-area: title;
+            }
+            &-email{
+                grid-area: email;
+            }
+            &-message{
+                grid-area: message;
+                height: 12em;
+                resize: none;   
+            }
+            &-button{
+                grid-area: button;
+                // padding: 1em;
+                display: grid;
+
+                @include for-tablet-portrait-up{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__traffic-directions{
+
+        .o-content-wrapper{
+            padding: 6em 0;
+            margin: 0 auto;
+        }
+
+        &-title{
+            // grid-column-start: span 3;
+            @include for-tablet-landscape-up{
+                text-align: center;
+            }
+            padding-bottom: 2rem;
+        }
+
+        &-methods{
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 2em;
+            
+
+            @include for-tablet-landscape-up{
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            & h2 {
+                padding: 1rem 0;
+            }
+        }
+
+    }
+}

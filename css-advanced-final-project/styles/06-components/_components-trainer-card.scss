@@ -1,0 +1,33 @@
+.c-trainer-card{
+
+    &__image{
+        border: 0.4em solid $primary-300; 
+        border-radius: 50%;
+        height: 10.75em;
+        width: 10.75em;
+        overflow: hidden;        
+        
+        margin: 0 auto;
+
+    }
+
+
+    &__name{
+        grid-area: name;
+        color: $primary-300;
+        margin: 0 auto;
+    }
+
+    &__role{
+        grid-area: role;
+        color: $grey-400;    
+        margin: 0 auto;
+
+    }
+
+    &__description{
+        text-align: start;
+        grid-area: description;
+        
+    }
+}

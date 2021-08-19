@@ -1,0 +1,38 @@
+@import './01-settings/settings-colors';
+@import './01-settings/settings-layout';
+@import './01-settings/settings-breakpoints';
+@import './01-settings/settings-animations';
+
+@import './02-tools/tools-shadows';
+@import './02-tools/tools-borders';
+
+@import './03-generic/generic-normalize';
+
+@import './04-elements/element-typography';
+@import './04-elements/elements-footer';
+@import './04-elements/elements-lists';
+@import './04-elements/element-paragraphs';
+@import './04-elements/elements-input';
+
+@import './05-objects/object_placeholder';
+@import './05-objects/objects-borders';
+@import './05-objects/objects-labels';
+@import './05-objects/objects-sections';
+@import './05-objects/objects-wrappers';
+
+@import './06-components/components-footer';
+@import './06-components/components-header';
+@import './06-components/components-buttons';
+@import './06-components/components-trainer-card';
+@import './06-components/components_banner';
+@import './06-components/components-article';
+
+@import './06-components/components-main-courses';
+@import './06-components/components-main-trainers';
+@import './06-components/components-main-contact-us';
+
+@import './99-utilities/utilities-hidden';
+@import './99-utilities/utilities-center';
+@import './99-utilities/utilities-color';
+@import './99-utilities/utilities-underline';
+@import './99-utilities/utilities-animatable';

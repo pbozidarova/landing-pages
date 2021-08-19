@@ -1,0 +1,261 @@
+.c-main-trainers{
+    
+    color: $grey-700;
+
+    &__directors{
+        
+        .o-content-wrapper{
+            padding: 3em 0 4em 0;
+
+            @include for-tablet-landscape-up{
+                padding: 6em 0;
+            }
+        }
+
+        &__director{
+            display: grid;
+    
+            grid-template-areas: "image"
+                                    "name"
+                                    "role" 
+                                    "description";
+                                   
+            align-items: start;
+            column-gap: 2em;
+            row-gap: 0.5em;
+                                    
+            @include for-tablet-portrait-up{
+                grid-template-areas: "image name"
+                                    "image role"
+                                    "image description";
+                grid-template-columns: max-content 1fr;
+            }   
+
+
+            &-image{
+                grid-area: image;
+                transition: transform 0.5s ease-in;
+               
+                &:hover{
+                    transform: scale(1.2);
+                }
+                
+                & > img {
+                    @extend %o_relative;
+                    z-index: 55;
+                };
+            }
+    
+            &-name{
+                grid-area: name;
+                padding-top: 1.5rem;
+                
+                @include for-tablet-portrait-up{
+                    padding-top: 0;
+                    margin: 0;
+                }
+            }
+
+            &-role{
+                grid-area: role;
+
+                @include for-tablet-portrait-up{
+                    margin: 0;
+                }
+            }         
+            
+            &-description{
+                grid-area: description;
+                padding-top: 1em;
+            }
+        }
+    }
+
+    &__trainers{
+
+        .o-content-wrapper{
+            max-width: 66.5em;
+            @extend %o_relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, max-content);         
+            row-gap: 3em; 
+            padding: 4em 0 6em 0;
+            
+            
+            @include for-tablet-portrait-up{
+                padding: 6em 0 8em 0;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            @include for-tablet-landscape-up{
+                // padding: 12em 7.65%;
+                grid-template-columns: repeat(3, 1fr);
+                & div {
+                    display: grid;                    
+                }
+            }
+
+            @include for-desktop-up {
+                grid-template-columns: repeat(4, 1fr);
+                padding-top: 6.5em;
+                padding-bottom: 8em;
+                
+            }
+
+        }
+
+        &__trainer{
+            display: grid;
+    
+            grid-template-areas: "image"
+                                    "name"
+                                    "role" 
+                                    "description";
+            grid-template-columns: max-content;                       
+
+            align-items: start;
+            text-align: center;
+            column-gap: 2em;
+            row-gap: 1em;
+            justify-content: space-around;
+
+            &-image{
+                grid-area: image;
+                @extend %o_relative;
+                   
+                img {            
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    transition: transform 0.5s ease-in;
+
+                    // &:hover{
+                    //     z-index: 0;
+                    // }
+
+                    &:hover{
+                        animation-name: z-index-animate;
+                        // opacity: 1;
+                        animation-duration: 0.7s;
+                        animation-timing-function: ease-in-out;
+                        animation-fill-mode: forwards;
+                        // animation-delay: 1s;
+                    }
+                }
+                &::after{
+                    content: url('/media/trainers/learn-more.svg');
+                    background-color: $secondary-800;
+                    opacity: 0.8;
+                    cursor: pointer;
+        
+                    // position: absolute;
+                    z-index: 0;
+                    // transform: translateX(0);
+
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+        
+                    height: 100%;
+                    width: 100%;
+                    
+                }   
+
+         
+            }
+    
+            &-name{
+                grid-area: name;
+            }
+
+            &-role{
+                grid-area: role;
+            }         
+            
+            &-description{
+                grid-area: description;
+            }
+    
+        }
+
+    }
+
+    &__become-part{
+        
+        border-top: 0.75em solid $blue-200;
+        
+        @include for-desktop-up{
+            padding-bottom: 8em;
+        }
+        &-title{
+            @include for-tablet-landscape-up{
+                font-size: 2.25rem;
+                margin: 0 auto;
+            }
+        }
+
+        .o-content-wrapper{
+            display: grid;
+            row-gap: 2em;
+        }
+
+        &-description{
+            @include for-tablet-landscape-up{
+                max-width: 52em;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+
+        &-form{
+            
+            display: grid;
+            // grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            row-gap: 1em;
+            column-gap: 2em;
+            align-items: center;
+            justify-content: center;
+            
+
+            @include for-tablet-landscape-up{
+                grid-template-columns: repeat(3, max-content);
+            }
+
+            @include for-desktop-up{
+                grid-template-columns: repeat(4, max-content);
+                
+            }
+
+            & > input {
+                background: transparent;
+                color: white;
+                border-radius: 0.375em;
+                border-color: white;
+                 
+                &::placeholder{
+                    color: white;
+                }
+            }
+        }
+
+        &-button{
+            display: grid;
+            
+            @include for-tablet-landscape-up{
+                grid-column-start: 2;
+                padding-top: 1em;
+            }
+
+            @include for-desktop-up{
+                grid-column-start: 4;
+                margin: 0 1em;
+                padding-top: 0;
+            }
+        }
+
+    }
+
+}

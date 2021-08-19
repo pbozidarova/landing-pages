@@ -1,0 +1,100 @@
+.o-section {
+
+    color: white;
+    padding: 4em 0;
+    min-height: 18.875em;
+
+    &__two-equal-columns{
+        .o-content-wrapper{
+            padding: 4em 0;
+
+            position: relative;
+            z-index: 1;
+
+            @include for-tablet-landscape-up{
+                display: block;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                // column-gap: 2em;
+                align-items: top;
+            }
+
+            & section:first-child{
+                padding-bottom: 2em;
+                @include for-tablet-landscape-up{
+                    padding-bottom: 0em;
+                    padding-right: 3em;
+                }
+            }
+
+            & section:last-child{
+                padding-top: 2em;
+                @include for-tablet-landscape-up{
+                    padding-top: 0;
+                    padding-left: 3em;
+
+                }
+            }
+
+            
+        }
+       
+    }
+
+    &__longer-first-and-image-as-second-column{
+        @include for-tablet-landscape-up{    
+            .o-content-wrapper{
+                display: grid;
+                grid-template-columns: 1.8fr 1fr;
+                column-gap: 6.9375em;
+                align-items: center;
+                
+            }
+        }
+    }
+
+    &__about{        
+        text-align: center;
+        
+        .o-content-wrapper{
+            display: grid;
+            grid-template-rows: max-content max-content;
+            row-gap: 1.5em;
+        }
+        
+        &-title{
+            margin: 0 auto;
+
+            @include for-tablet-portrait-up {
+                max-width: 50%;
+            }
+        }
+
+        &-description{
+            margin: 0 auto;
+
+            @include for-tablet-landscape-up{
+                max-width: 66%;
+            }
+        }
+
+    }
+
+    
+    &--blue400{
+        background-color: $blue-400;
+    }
+
+    &--blue300{
+        background-color: $blue-300;
+    }
+
+    &--secondary50{
+        background-color: $secondary-50;
+    }
+
+    &--secondary{
+        background-color: $secondary-600;
+    }
+
+}

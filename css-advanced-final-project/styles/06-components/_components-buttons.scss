@@ -1,0 +1,27 @@
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.875em 2em;
+    border-radius: 6.25em;
+    @include BoxShadow(4);
+    transition: box-shadow 0.5s ease-in;
+
+    &--secondary{
+        color: white;
+        background-color: $secondary-800;
+    }
+
+    &--primary{
+        color: $secondary-800;
+        border: 1px solid $secondary-800;
+        box-shadow: none;
+        background-color: white;
+        // padding: 0.875rem 2rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+        @include BoxShadow(1)
+    }
+}

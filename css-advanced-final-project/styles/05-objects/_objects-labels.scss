@@ -1,0 +1,7 @@
+.o-label{
+    @include BoxShadow(1);
+    background-color: $secondary-500;
+    border-radius: 0.3em;
+    padding: 0.3em 0.6em;
+    text-transform: uppercase;
+}

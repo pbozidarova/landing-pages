@@ -1,0 +1,80 @@
+.u-hover-animation{
+
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+
+    &__nav{
+        &:hover{
+            animation-name:  grey-to-secondary;
+        }
+    }
+
+    &__footer{
+        &:hover{
+            animation-name: grey-to-primary;
+        }
+    }
+
+    
+    @for $i from 1 to 50 {
+        .character:nth-child(#{$i}){
+            animation-delay: 0.1s * $i;
+        }
+    }
+}
+
+.u-move-down{
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
+    animation-name: move-down;
+}
+
+@for $i from 1 to 10 {
+    .u-move-down:nth-child(#{$i}){
+        animation-delay: 0.3s * ($i % 2);
+    }
+}
+
+.u-fade-in {
+    opacity: 0;
+    animation: fade-in 2s forwards 1 ease-out 0.5s;
+
+    $i: 1100;
+    @while $i < 2000 {
+        
+        &--delay-#{$i} {
+            animation-delay: #{$i}ms;
+        }
+
+        $i: $i + 100; 
+    }
+}
+
+.u-reveal{
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    &-left{
+        animation-name: reveal-left;
+    }
+
+    &-right{
+        animation-name: reveal-right;
+    }
+}
+
+.u-rotate{
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+
+    animation-name: rotate;
+}
