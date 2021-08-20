@@ -1,9 +1,15 @@
 .projects{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    // grid-template-rows: repeat(4, 1fr);
     column-gap: 2em;
     row-gap: 2em;
+    
+    @include for-desktop-up{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+        height: auto;
 
+    }
 }
 
 .project{

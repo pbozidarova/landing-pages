@@ -5,21 +5,28 @@ main{
     position: relative;
     // height: 100vh;
     color: $darkGreen;
-    padding-bottom: 10%;
-
+    padding-bottom: 20%;
 
 }
 
 main::after{
     content: "";
-    rotate: -5deg;
+    transform: rotate(-5deg);
     // display: block;
     height: 15%;
     width: 150%;
     position: absolute;
     left: -10%;
-    bottom: -10%;
+    bottom: -13%;
     z-index: 1;
     background-color: $paleGrey;
     @include BoxShadow(inset2);
+
+    @include for-tablet-landscape-up{
+        bottom: -13%;
+    }
+    
+    @include for-desktop-up{
+        bottom: -10%;
+    }
 }

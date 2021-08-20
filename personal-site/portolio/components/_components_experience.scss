@@ -3,18 +3,26 @@
     position: relative;
 
     & > div {
-        padding: 1em;
-        width: 40%;
         @include BoxShadow(2);
         background-color: $darkYellow;
+        padding: 1em;
 
-        // border: 1px solid $darkGreen;
+        @include for-tablet-landscape-up {
+            width: 40%;
+        }
+
+        display: grid;
+        align-items: end;
+        margin-top: 4em;
+        @include for-tablet-landscape-up {
+            margin-top: 0;
+        }
     }
 
     &-odd {
-                
         display: grid;
         position: relative;
+        
         & > div {
             display: flex;
             justify-content: space-between;
@@ -43,9 +51,15 @@
         display: grid;
         // align-content: flex-end;
         // justify-content: end;     
-        margin-left: auto;
+        
         position: relative;
-
+        // width: 100%;
+        
+        margin-top: 8em;
+        @include for-tablet-landscape-up {
+            margin-top: 0;
+            margin-left: auto;
+        }
         
         & > div {
             display: flex;
@@ -82,16 +96,21 @@
         white-space: nowrap;
 
         display: grid;
-        align-items: center;
+        align-items: start;
         justify-content: center;
+        
+        @include for-tablet-landscape-up{
+            align-items: center;
+
+        }
     }
 
     .year{
         // margin-bottom: 3em;
-        height: 50%;
         // position: absolute;
         margin: 0 auto;
         width: 6em;
+        height: 30%;
         padding: 0.1em;
         display: flex;
         align-items: center;
@@ -102,6 +121,11 @@
 
 
         @include BoxShadow(2);
+
+        @include for-tablet-landscape-up{
+            height: 50%;
+
+        }
    
     }
 

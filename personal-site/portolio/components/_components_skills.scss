@@ -2,22 +2,32 @@
 
     & > div {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
         // column-gap: 2em;
-        
+        grid-template-columns: 1fr 1fr;
+
         justify-content: space-between;
+        
+        @include for-tablet-landscape-up{
+            grid-template-columns: 1fr 1fr 1fr;
+
+        }
     }
     ul {
         // max-width: 90%;
         li {
             height: 10%;
             margin: 0em 1em 1em 0;
-            padding: 1em 4em;
             background-color: $darkGreen;
             color: $paleGrey;
+            align-items: center;
+            // display: flex;
+            // justify-content: space-between;
+
+            @include for-tablet-landscape-up{
+                padding: 1em 4em;
+    
+            }
         }
-        // display: flex;
-        // justify-content: space-between;
 
     }
 }

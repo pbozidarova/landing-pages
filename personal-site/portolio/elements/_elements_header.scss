@@ -10,7 +10,7 @@ header{
 
 header ::after{
     content: "";
-    rotate: -5deg;
+    transform: rotate(-5deg);
     // display: block;
     height: 80%;
     width: 160%;

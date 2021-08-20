@@ -2,10 +2,15 @@ footer {
     // position: relative;
     .o-wrapper{
         display: grid;
-        grid-template-columns: max-content max-content;
         align-items: left;
         column-gap: 3em;
         padding-bottom: 2em;
+        justify-content: center;
+
+        @include for-desktop-up{
+            grid-template-columns: max-content max-content;
+
+        }
         
         & > div {
             display: flex;

@@ -1,6 +1,6 @@
 @keyframes rotateOdd {
     from {
-      rotate: -90deg;
+      transform: rotate(-90deg);
       opacity: 0;
     }
   
@@ -13,7 +13,7 @@
   
 @keyframes rotateEven {
     from {
-      rotate: 90deg;
+      transform: rotate(90deg);
       opacity: 0;
     }
   
