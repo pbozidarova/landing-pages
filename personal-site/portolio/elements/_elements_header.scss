@@ -1,23 +1,26 @@
 header{
-    height: 30vh;
     overflow: hidden;
     position: relative;
-    display: flex;
-    // align-items: center;
     padding: 5% 0;
-    
+
+    height: 30vh;
+    // .o-wrapper{
+    //     position: relative;
+    //     overflow: hidden;
+
+    // }
 }
 
-header ::after{
+header::after{
     content: "";
     transform: rotate(-5deg);
     // display: block;
-    height: 80%;
-    width: 160%;
+    height: 8em;
+    width: 120%;
     position: absolute;
-    left: -50%;
-    bottom: -80%;
-    z-index: 1;
+    left: -10%;
+    bottom: -12%;
+    z-index: 0;
     background-color: $paleYellow;
     @include BoxShadow(inset2);
 }
