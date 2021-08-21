@@ -2,12 +2,15 @@ header{
     overflow: hidden;
     position: relative;
     padding: 5% 0;
-
-    height: 30vh;
-    // .o-wrapper{
-    //     position: relative;
-    //     overflow: hidden;
-
+    
+    height: 50vh;
+   
+    @include for-tablet-portrait-up{
+        height: 30vh;
+    }
+    
+    // @include for-desktop-up{
+    //     height: 30vh;
     // }
 }
 
@@ -15,12 +18,20 @@ header::after{
     content: "";
     transform: rotate(-5deg);
     // display: block;
-    height: 8em;
+    height: 12em;
     width: 120%;
     position: absolute;
     left: -10%;
-    bottom: -12%;
+    bottom: -30%;
     z-index: 0;
     background-color: $paleYellow;
     @include BoxShadow(inset2);
+
+    @include for-tablet-portrait-up {
+        bottom: -30%;
+    }
+    
+    @include for-desktop-up{
+        bottom: -18%;
+    }
 }
